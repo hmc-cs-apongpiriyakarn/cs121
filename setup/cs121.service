@@ -5,9 +5,9 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/cs121
-Environment="PATH=/home/ubuntu/cs121/myenv/bin"
-ExecStart=/home/ubuntu/cs121/myenv/bin/gunicorn --workers 3 --bind unix:cs121.sock -m 007 --log-level debug --access-logfile 'app.log'  wsgi:app
+WorkingDirectory=/home/ubuntu/clickbait
+Environment="PATH=/home/ubuntu/clickbait/myenv/bin"
+ExecStart=/home/ubuntu/clickbait/myenv/bin/gunicorn --workers 3 --bind unix:cs121.sock -m 007 --log-level debug --access-logfile 'app.log'  wsgi:app
 RestartSec=35
 Restart=on-failure
 
