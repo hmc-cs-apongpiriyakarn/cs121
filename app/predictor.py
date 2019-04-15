@@ -17,10 +17,10 @@ from werkzeug.utils import secure_filename
 #load model
 def load_model(model_path):
     path = Path(model_path)
-    classes = ['cat', 'lion','toy']
+    classes = ['clickbait','nonclickbait']
     data2 = ImageDataBunch.single_from_classes(path, classes, ds_tfms=get_transforms(), size=224).normalize(imagenet_stats)
     learn = create_cnn(data2, models.resnet34)
-    learn.load('stage-2')
+    learn.load('clickbait-model-2')
     return learn
 
 def model_predict(img_path, model_path):
