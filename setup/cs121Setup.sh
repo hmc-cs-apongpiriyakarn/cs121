@@ -23,7 +23,9 @@ deactivate
 #get learning model
 echo "Geting fastai model"
 cd ~/cs121/app/models
-wget https://www.cs.hmc.edu/~z/cs121fastaiModel/stage-2.pth
+#wget https://www.cs.hmc.edu/~z/cs121fastaiModel/stage-2.pth
+pip install gdown
+gdown https://drive.google.com/open?id=1HPJCcbm7Pj5xo7Lv_4J1Ze_ItUE8UIJZ
 cd ~/cs121
 
 #site/service set up
